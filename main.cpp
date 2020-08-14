@@ -3,6 +3,8 @@
 #include <string>
 using namespace std;
 int InputCheck(const char *in_line) {
+
+
     //НАХОЖДЕНИЕ ЧИСЛОВОГО ЗНАЧЕНИЯ В ВЫБОРЕ МЕНЮ
     int ch_num = atoi(in_line);
     return (ch_num);
@@ -15,7 +17,7 @@ int LevelStartMenu(int in_num) {
             lvl = in_num;
             break;
         case 2:
-            cout << "Синтаксис(Найдите ошибку в кусочке кода)";
+            cout << "Функции";
             lvl = in_num;
             break;
         case 3:
@@ -95,7 +97,13 @@ int StartMenuDrop() {
     int lvl = 0;
     while (lvl == 0) {
         cin >> key_in;
+        if (key_in == "exit") {
+            exit(0);
+        }
         int key_formatted = InputCheck(key_in.c_str());
+        if (key_formatted == 1337) {
+            exit(0);
+        }
 
         cout << "Выбрано " << key_formatted << " . Это соответствует ";
         lvl = LevelStartMenu(key_formatted);
@@ -110,8 +118,8 @@ int main() {
     while (1) {
         cout << "+-----------------------------------------------+\n"
                 "|            QuizRunner's Test system           |\n"
-                "|                                               |\n"
                 "|                      С++                      |\n"
+                "|                  Выход - exit                 |\n"
                 "|                    СУММА - "
              << point_pool[0] + point_pool[1] + point_pool[3] + point_pool[2] << "                  |\n"
                                                                                  "+-----------------------------------------------+\n"
