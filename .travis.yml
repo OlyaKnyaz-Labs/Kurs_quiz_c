@@ -12,5 +12,3 @@ matrix:
 
 script:
   - git ls-files txt /!*.txt | xargs clang-format -i && git diff --exit-code
-  - cd src
-  - git ls-files  | xargs clang-format -i && git diff --exit-code
