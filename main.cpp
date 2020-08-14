@@ -3,8 +3,6 @@
 #include <string>
 using namespace std;
 int InputCheck(const char *in_line) {
-
-
     //НАХОЖДЕНИЕ ЧИСЛОВОГО ЗНАЧЕНИЯ В ВЫБОРЕ МЕНЮ
     int ch_num = atoi(in_line);
     return (ch_num);
@@ -137,19 +135,19 @@ int main() {
         switch (lvl_token) {
 
             case 1:
-                point_pool[lvl_token - 1] = Quiz("1.txt", "1_a.txt");
+                point_pool[lvl_token - 1] = Quiz("txt/1.txt", "txt/1_a.txt");
                 cout << "Отвечено верно " << point_pool[lvl_token - 1] << " из 8\n";
                 break;
             case 2:
-                point_pool[lvl_token - 1] = Quiz("2.txt", "2_a.txt");
+                point_pool[lvl_token - 1] = Quiz("txt/2.txt", "txt/2_a.txt");
                 cout << "Отвечено верно " << point_pool[lvl_token - 1] << " из 8\n";
                 break;
             case 3:
-                point_pool[lvl_token - 1] = Quiz("3.txt", "3_a.txt");
+                point_pool[lvl_token - 1] = Quiz("txt/3.txt", "txt/3_a.txt");
                 cout << "Отвечено верно " << point_pool[lvl_token - 1] << " из 8\n";
                 break;
             case 4:
-                point_pool[lvl_token - 1] = Quiz("4.txt", "4_a.txt");
+                point_pool[lvl_token - 1] = Quiz("txt/4.txt", "txt/4_a.txt");
                 cout << "Отвечено верно " << point_pool[lvl_token - 1] << " из 8\n";
                 break;
             default:
