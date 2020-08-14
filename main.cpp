@@ -9,15 +9,15 @@ int LevelStartMenu(int in_num) {
     int lvl;
     switch (in_num) {
         case 1:
-            cout << "Переменные";
+            cout << "Переменные ";
             lvl = in_num;
             break;
         case 2:
-            cout << "Синтаксис";
+            cout << "Синтаксис ";
             lvl = in_num;
             break;
         case 3:
-            cout << "Верно /неверно";
+            cout << "Верно /неверно ";
             lvl = in_num;
             break;
         case 4:
@@ -25,7 +25,7 @@ int LevelStartMenu(int in_num) {
             lvl = in_num;
             break;
         default:
-            cout << "Ничему,введите значение еще раз";
+            cout << "Ничему,введите значение еще раз ";
             lvl = 0;
     }
     return (lvl);
@@ -45,13 +45,17 @@ int StartMenuDrop() {
             "+-----------------------+-----------------------+\n";
 
     string key_in;
-    while (1) {
+    int lvl = 0;
+    while (lvl == 0) {
         cin >> key_in;
-        InputCheck(key_in.c_str());
-        cout << "Выбрано " << InputCheck(key_in.c_str()) << " . Это соответствует ";
+        int key_formatted = InputCheck(key_in.c_str());
+        ;
+        cout << "Выбрано " << key_formatted << " . Это соответствует ";
+        lvl = LevelStartMenu(key_formatted);
     }
+    return (lvl);
 }
 int main() {
-    StartMenuDrop();
+    cout << StartMenuDrop();
     return 0;
 }
