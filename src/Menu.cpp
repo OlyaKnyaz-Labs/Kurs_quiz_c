@@ -4,6 +4,7 @@
 using namespace std;
 int LevelStartMenu(int in_num) {
     int lvl;
+    //ВЫБОР ПУНКТА МЕНЮ
     switch (in_num) {
         case 1:
             cout << "Переменные ";
