@@ -11,4 +11,4 @@ matrix:
       env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS="-std=c++11 -Wdeprecated" HOMEBREW_LOGS=~/homebrew-logs HOMEBREW_TEMP=~/homebrew-temp
 
 script:
-  - git ls-files src/!*.txt | xargs clang-format -i && git diff --exit-code
+  - git ls-files txt/!*.txt | xargs clang-format -i && git diff --exit-code
