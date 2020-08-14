@@ -31,7 +31,7 @@ int LevelStartMenu(int in_num) {
     }
     return (lvl);
 }
-int Var_Quiz(const string &path1, const string &path2) {
+int Quiz(const string &path1, const string &path2) {
     int size = 8;
     string quiz_src[size], quiz_answer[size], temp;
     //ЗАПОЛНЕНИЕ ПУЛА ВОПРОСОВ
@@ -86,7 +86,7 @@ int main() {
     switch (lvl_token) {
 
         case 1:
-            Var_Quiz("QuizSource_Var.txt", "QuizSource_Var_answer.txt");
+            Quiz("QuizSource_Var.txt", "QuizSource_Var_answer.txt");
             break;
         default:
             exit(2);
