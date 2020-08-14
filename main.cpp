@@ -3,6 +3,7 @@
 #include <string>
 using namespace std;
 int InputCheck(const char *in_line) {
+    //НАХОЖДЕНИЕ ЧИСЛОВОГО ЗНАЧЕНИЯ В ВЫБОРЕ МЕНЮ
     int ch_num = atoi(in_line);
     return (ch_num);
 }
@@ -47,6 +48,7 @@ int Ask(const string &quest, const string &answer) {
          << "Ваш ответ: ";
     string key_str;
     cin >> key_str;
+    //ПРОВЕРКА ВВЕДЕННОГО ОТВЕТА С НУЖНЫМ
     int check = Comparse(key_str, answer);
     if (check == 1) {
         cout << "И он верен" << endl;
