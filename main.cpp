@@ -31,6 +31,31 @@ int LevelStartMenu(int in_num) {
     }
     return (lvl);
 }
+
+
+int Comparse(string in, string check) {
+    if (in == check) {
+        return (1);
+    } else {
+        return (0);
+    }
+}
+int Ask(string quest, string answer) {
+    cout << endl
+         << "____________________" << endl
+         << quest << endl
+         << "Ваш ответ: ";
+    string key_str;
+    cin >> key_str;
+    int check = Comparse(key_str, answer);
+    if (check == 1) {
+        cout << "И он верен" << endl;
+        return (1);
+    } else {
+        cout << "И он неверен" << endl;
+        return (0);
+    }
+}
 int Quiz(const string &path1, const string &path2) {
     int size = 8;
     string quiz_src[size], quiz_answer[size], temp;
@@ -51,9 +76,13 @@ int Quiz(const string &path1, const string &path2) {
         i++;
     }
     //ПРОВЕРКА СОВПАДЕНИЯ
-    for (int j = 0; j < size; j++) {
-        cout << endl
-             << quiz_src[j] << "--" << quiz_answer[j];
+    /* for (int j = 0; j < size; j++) {
+         cout << endl
+              << quiz_src[j] << "--" << quiz_answer[j];
+     }*/
+    for (int j = 0; j < 8; j++) {
+
+        Ask(quiz_src[j], quiz_answer[j]);
     }
 }
 int StartMenuDrop() {
