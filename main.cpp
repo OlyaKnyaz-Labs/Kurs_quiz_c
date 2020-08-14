@@ -1,3 +1,4 @@
+#include <fstream>
 #include <iostream>
 #include <string>
 using namespace std;
@@ -30,6 +31,31 @@ int LevelStartMenu(int in_num) {
     }
     return (lvl);
 }
+int Var_Quiz(const string &path1, const string &path2) {
+    int size = 8;
+    string quiz_src[size], quiz_answer[size], temp;
+    //ЗАПОЛНЕНИЕ ПУЛА ВОПРОСОВ
+    ifstream file1(path1);
+    int i = 0;
+    while (getline(file1, temp, '\n')) {
+        quiz_src[i] = temp;
+
+        i++;
+    }
+    //ЗАПОЛНЕНИЕ ПУЛА ОТВЕТОВ
+    ifstream file2(path2);
+    i = 0;
+    while (getline(file2, temp, '\n')) {
+        quiz_answer[i] = temp;
+
+        i++;
+    }
+    //ПРОВЕРКА СОВПАДЕНИЯ
+    for (int j = 0; j < size; j++) {
+        cout << endl
+             << quiz_src[j] << "--" << quiz_answer[j];
+    }
+}
 int StartMenuDrop() {
     cout << "+-----------------------------------------------+\n"
             "|            QuizRunner's Test system           |\n"
@@ -56,6 +82,14 @@ int StartMenuDrop() {
     return (lvl);
 }
 int main() {
-    cout << StartMenuDrop();
+    int lvl_token = StartMenuDrop();
+    switch (lvl_token) {
+
+        case 1:
+            Var_Quiz("QuizSource_Var.txt", "QuizSource_Var_answer.txt");
+            break;
+        default:
+            exit(2);
+    }
     return 0;
 }
