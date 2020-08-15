@@ -16,5 +16,5 @@ script:
   - git ls-files | xargs clang-format -i && git diff --exit-code
   - cd ..
   - cd tests
-  - git ls-files | xargs clang-format -i && git diff --exit-code
+  - git ls-files googletest/* | xargs clang-format -i && git diff --exit-code
   -
