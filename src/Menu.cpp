@@ -2,29 +2,30 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int LevelStartMenu(int in_num) {
+int LevelStartMenu(int in_num)
+{
     int lvl;
     //ВЫБОР ПУНКТА МЕНЮ
     switch (in_num) {
-        case 1:
-            lvl = in_num;
-            break;
-        case 2:
-            lvl = in_num;
-            break;
-        case 3:
-            lvl = in_num;
-            break;
-        case 4:
-            lvl = in_num;
-            break;
-        default:
-            lvl = 0;
+    case 1:
+        lvl = in_num;
+        break;
+    case 2:
+        lvl = in_num;
+        break;
+    case 3:
+        lvl = in_num;
+        break;
+    case 4:
+        lvl = in_num;
+        break;
+    default:
+        lvl = 0;
     }
     return (lvl);
 }
-int StartMenuDrop() {
-
+int StartMenuDrop()
+{
     string key_in;
     int lvl = 0;
     while (lvl == 0) {

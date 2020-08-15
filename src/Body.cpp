@@ -2,7 +2,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int Comparse(const string &in, const string &check) {
+int Comparse(const string& in, const string& check)
+{
     //СРАВНЕНИЕ
     if (in == check) {
         return (1);
@@ -10,7 +11,8 @@ int Comparse(const string &in, const string &check) {
         return (0);
     }
 }
-int Ask(const string &quest, const string &answer) {
+int Ask(const string& quest, const string& answer)
+{
     cout << endl
          << "____________________" << endl
          << quest << endl
@@ -27,9 +29,10 @@ int Ask(const string &quest, const string &answer) {
         return (0);
     }
 }
-int Quiz(const string &path1, const string &path2) {
+int Quiz(const string& path1, const string& path2)
+{
     int points = 0;
-    int size = 8;//РАЗМЕР МАССИВА
+    int size = 8; //РАЗМЕР МАССИВА
     string quiz_src[size], quiz_answer[size], temp;
     //ЗАПОЛНЕНИЕ ПУЛА ВОПРОСОВ
     ifstream file1(path1);
@@ -53,7 +56,6 @@ int Quiz(const string &path1, const string &path2) {
               << quiz_src[j] << "--" << quiz_answer[j];
      }*/
     for (int j = 0; j < 8; j++) {
-
         points += Ask(quiz_src[j], quiz_answer[j]);
     }
     return (points);
