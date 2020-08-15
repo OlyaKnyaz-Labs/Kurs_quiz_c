@@ -5,4 +5,4 @@
 int InputCheck(std::string getLevelNumber);
 #define QUIZ_RUNNER_CHECK_H
 
-#endif//QUIZ_RUNNER_CHECK_H
+#endif // QUIZ_RUNNER_CHECK_H
