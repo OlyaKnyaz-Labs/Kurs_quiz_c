@@ -1,8 +1,9 @@
 #include "Check.h"
 #include <iostream>
-
-int InputCheck(const char *in_line) {
-    //НАХОЖДЕНИЕ ЧИСЛОВОГО ЗНАЧЕНИЯ В ВЫБОРЕ МЕНЮ
-    int ch_num = atoi(in_line);
-    return (ch_num);
+#include <string>
+int InputCheck(std::string getLevelNumber)
+{
+    int Number = 0;
+    Number = atoi(getLevelNumber.c_str()); //
+    return Number;
 }

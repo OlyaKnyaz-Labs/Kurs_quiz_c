@@ -3,12 +3,12 @@ matrix:
     - os: linux
       compiler: gcc
       env: BUILD_TYPE=Debug VERBOSE=1 CXX_FLAGS="-std=c++11 -Wdeprecated"
-    - os: osx
-      compiler: gcc
-      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS="-std=c++11 -Wdeprecated" HOMEBREW_LOGS=~/homebrew-logs HOMEBREW_TEMP=~/homebrew-temp
-    - os: osx
-      compiler: clang
-      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS="-std=c++11 -Wdeprecated" HOMEBREW_LOGS=~/homebrew-logs HOMEBREW_TEMP=~/homebrew-temp
-
 script:
   - git ls-files txt/!*.txt | xargs clang-format -i && git diff --exit-code
+  - cd src
+  - git ls-files | xargs clang-format -i && git diff --exit-code
+  - cd ..
+  - cd tests
+  - git ls-files */googletest/* | xargs clang-format -i && git diff --exit-code
+  - ./install.sh
+  - ./Gtests.exe
