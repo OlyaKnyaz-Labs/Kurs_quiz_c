@@ -24,6 +24,7 @@ int LevelStartMenu(int in_num)
     }
     return (lvl);
 }
+//Передача корректного номера через return
 int StartMenuDrop()
 {
     string key_in;

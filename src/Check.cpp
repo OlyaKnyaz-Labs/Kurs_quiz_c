@@ -1,6 +1,7 @@
 #include "Check.h"
 #include <iostream>
 #include <string>
+//Считывание int значений из string переменных
 int InputCheck(std::string getLevelNumber)
 {
     int Number = 0;

@@ -6,10 +6,12 @@ using namespace std;
 
 
 int main() {
+    //Доп. очистка массива
     int point_pool[4];
     for (int j = 0; j < 4; j++) {
         point_pool[j] = 0;
     }
+    //Вывод меню и вызов функции Quiz с нужными базами текста
     while (1) {
         cout << "+-----------------------------------------------+\n"
                 "|            QuizRunner's Test system           |\n"
@@ -28,7 +30,6 @@ int main() {
                                                                                 "+-----------------------+-----------------------+\n";
 
         int lvl_token = StartMenuDrop();
-
         switch (lvl_token) {
 
             case 1:
