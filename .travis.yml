@@ -9,7 +9,7 @@ script:
   - git ls-files | xargs clang-format -i && git diff --exit-code
   - cd ..
   - cmake CMakeLists.txt
-  - make MakeFile
+  - make Makefile
   - cd tests
   - git ls-files */googletest/* | xargs clang-format -i && git diff --exit-code
   - ./install.sh
